@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grabador Profesional 2024 - Graba tu pantalla con calidad</title>
+    <meta name="description" content="Grabador Profesional 2024 es una aplicación web que te permite grabar la pantalla de tu computadora con alta calidad. Personaliza la calidad de video, audio y formato de salida.">
+    <meta name="keywords" content="grabador de pantalla, grabación de video, grabador profesional, grabar pantalla, grabar video, aplicación web, grabación de audio, calidad de video, grabación en HD">
+    <meta name="author" content="Metatech">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://tu-sitio-web.com/index.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icon.webp" type="image/webp">
+    <meta property="og:title" content="Grabador Profesional 2024 - Graba tu pantalla con calidad">
+    <meta property="og:description" content="Grabador Profesional 2024 es una aplicación web que te permite grabar la pantalla de tu computadora con alta calidad. Personaliza la calidad de video, audio y formato de salida.">
+    <meta property="og:image" content="https://tu-sitio-web.com/icon.webp">
+    <meta property="og:url" content="https://tu-sitio-web.com/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_CO">
+</head>
+<body>
+    <div class="container">
+        <div class="recorder-container">
+            <h1>Grabador Profesional <span class="badge">2024</span></h1>
+            
+            <div class="controls">
+                <button id="startBtn" class="btn btn-primary">
+                    <i class="fas fa-video"></i>
+                    <span>Iniciar Grabación</span>
+                </button>
+                
+                <button id="pauseBtn" class="btn btn-warning" disabled>
+                    <i class="fas fa-pause"></i>
+                    <span>Pausar</span>
+                </button>
+                
+                <button id="stopBtn" class="btn btn-danger" disabled>
+                    <i class="fas fa-stop"></i>
+                    <span>Detener</span>
+                </button>
+            </div>
+
+            <div class="settings">
+                <div class="setting-group">
+                    <label>Calidad de Video:</label>
+                    <select id="qualitySelect" class="select-custom">
+                        <option value="4k">Ultra HD (4K)</option>
+                        <option value="2k">Quad HD (2K)</option>
+                        <option value="fullHD" selected>Full HD (1080p)</option>
+                        <option value="hd">HD (720p)</option>
+                        <option value="sd">SD (480p)</option>
+                    </select>
+                </div>
+
+                <div class="setting-group">
+                    <label>FPS:</label>
+                    <select id="fpsSelect" class="select-custom">
+                        <option value="60">60 FPS</option>
+                        <option value="30">30 FPS</option>
+                        <option value="24">24 FPS (Cinematográfico)</option>
+                    </select>
+                </div>
+
+                <div class="setting-group">
+                    <label>Codec:</label>
+                    <select id="codecSelect" class="select-custom">
+                        <option value="av1">AV1 (Mejor calidad)</option>
+                        <option value="vp9">VP9 (Compatible)</option>
+                        <option value="vp8">VP8 (Mayor compatibilidad)</option>
+                    </select>
+                </div>
+
+                <div class="setting-group">
+                    <label>Audio:</label>
+                    <select id="audioSelect" class="select-custom">
+                        <option value="high">Alta calidad (48kHz)</option>
+                        <option value="medium" selected>Calidad media (44.1kHz)</option>
+                        <option value="low">Calidad baja (22kHz)</option>
+                    </select>
+                </div>
+
+                <div class="setting-group">
+                    <label>Formato de salida:</label>
+                    <select id="formatSelect" class="select-custom">
+                        <option value="mp4">MP4 (H.264)</option>
+                        <option value="avi">AVI</option>
+                        <option value="webm">WebM (VP9)</option>
+                    </select>
+                </div>
+
+                <div class="setting-group">
+                    <label>Calidad de Audio:</label>
+                    <select id="audioBitrateSelect" class="select-custom">
+                        <option value="320">Alta calidad (320 kbps)</option>
+                        <option value="256">Calidad muy buena (256 kbps)</option>
+                        <option value="192">Calidad buena (192 kbps)</option>
+                        <option value="128">Calidad estándar (128 kbps)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="status-container">
+                <div id="timer" class="timer">00:00:00</div>
+                <div id="fileSize" class="file-size">0 MB</div>
+            </div>
+
+            <div id="preview" class="preview-container hidden">
+                <video id="previewVideo" controls></video>
+                <div class="preview-controls">
+                    <button id="downloadBtn" class="btn btn-success">
+                        <i class="fas fa-download"></i>
+                        <span>Descargar</span>
+                    </button>
+                    <button id="shareBtn" class="btn btn-info">
+                        <i class="fas fa-share"></i>
+                        <span>Compartir</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Grabador Profesional. Creado por <a href="https://santiagotorres-web-developer.netlify.app/" target="_blank" rel="noopener noreferrer">Metatech</a>.</p>
+        </div>
+    </footer>
+    
+    <script src="screenRecorder.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
